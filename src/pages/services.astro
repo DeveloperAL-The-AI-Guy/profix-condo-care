@@ -47,13 +47,13 @@ const services = [
 const typical = ['Unit leaks', 'Hallway paint touch-ups', 'Drywall repair', 'Door closers', 'Fob hardware swaps', 'Parkade drain checks', 'Heat trace checks', 'Trip hazards', 'Guardrail tightening', 'Suite turnover patch/paint', 'Caulking', 'Baseboard repair', 'Small carpentry', 'Light fixture swaps', 'Safety signage'];
 ---
 <BaseLayout title="Condo Repair Services in Edmonton | ProFix" description="Board-ready condo repair, inspections, seasonal upkeep, and minor renovations with clear scope and documentation.">
-  <section class="section-shell py-14 space-y-4">
+  <section class="section-shell py-14 space-y-4 reveal">
     <p class="badge">Services</p>
     <h1 class="font-heading text-4xl text-ink">Board-friendly catalog of what we handle</h1>
     <p class="text-slate max-w-3xl">Clear scopes, fast scheduling, and documentation every visit. All copy is placeholder-ready for Edmonton condos.</p>
   </section>
 
-  <section class="section-shell pb-12 grid gap-6 md:grid-cols-2">
+  <section class="section-shell pb-12 grid gap-6 md:grid-cols-2 reveal">
     {services.map((service) => (
       <div class="card p-6 space-y-3" id={service.title.toLowerCase().replace(/\s+/g, '-')}> 
         <div class="flex items-center justify-between">
@@ -71,7 +71,7 @@ const typical = ['Unit leaks', 'Hallway paint touch-ups', 'Drywall repair', 'Doo
     ))}
   </section>
 
-  <section class="section-shell pb-16 space-y-4">
+  <section class="section-shell pb-16 space-y-4 reveal">
     <h2 class="font-heading text-3xl text-ink">Typical Requests in Edmonton Condos</h2>
     <div class="card p-6">
       <div class="grid gap-2 md:grid-cols-2 lg:grid-cols-3 text-sm text-slate">

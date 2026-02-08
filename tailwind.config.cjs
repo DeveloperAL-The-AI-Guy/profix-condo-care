@@ -8,15 +8,17 @@ module.exports = {
     },
     extend: {
       colors: {
-        ink: '#0D1B2A',
-        slate: '#1F2A3A',
-        stone: '#E8ECF1',
-        fog: '#F6F8FB',
-        accent: '#1D9BF0',
+        ink: '#0B1224',
+        slate: '#121A2E',
+        stone: '#E7ECF5',
+        fog: '#F4F6FB',
+        accent: '#F59E0B',     // amber accent
+        accent2: '#22D3EE',    // cyan secondary accent
         gold: '#C89B3C'
       },
       boxShadow: {
-        card: '0 20px 60px rgba(13,27,42,0.08)',
+        card: '0 24px 70px rgba(11,18,36,0.10)',
+        glow: '0 8px 30px rgba(34,211,238,0.25)',
       },
       borderRadius: {
         soft: '18px'

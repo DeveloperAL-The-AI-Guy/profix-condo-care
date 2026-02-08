@@ -20,13 +20,13 @@ const plans = [
 const steps = ['Request', 'Scope confirmation', 'Dispatch', 'Photo/PDF delivered', 'Invoice/summary'];
 ---
 <BaseLayout title="Property Manager Maintenance Subscriptions | ProFix Condo Care" description="Predictable condo maintenance subscriptions for Edmonton property managers with priority dispatch and PDF reporting.">
-  <section class="section-shell py-14 space-y-4">
+  <section class="section-shell py-14 space-y-4 reveal">
     <p class="badge">Subscription Plans</p>
     <h1 class="font-heading text-4xl text-ink">Predictable maintenance for property managers</h1>
     <p class="text-slate max-w-3xl">Fewer vendor calls, faster response, consistent documentation, and budgets you can forecast.</p>
   </section>
 
-  <section class="section-shell pb-12 grid gap-4 md:grid-cols-2">
+  <section class="section-shell pb-12 grid gap-4 md:grid-cols-2 reveal">
     <div class="card p-6 space-y-3">
       <h2 class="font-heading text-2xl text-ink">Problems solved</h2>
       <ul class="list-check">
@@ -47,7 +47,7 @@ const steps = ['Request', 'Scope confirmation', 'Dispatch', 'Photo/PDF delivered
     </div>
   </section>
 
-  <section class="section-shell pb-12">
+  <section class="section-shell pb-12 reveal">
     <div class="grid gap-4 md:grid-cols-3">
       {plans.map((plan) => (
         <div class="card p-6 space-y-4">
@@ -63,7 +63,7 @@ const steps = ['Request', 'Scope confirmation', 'Dispatch', 'Photo/PDF delivered
     </div>
   </section>
 
-  <section class="section-shell pb-16 space-y-4">
+  <section class="section-shell pb-16 space-y-4 reveal">
     <h2 class="font-heading text-3xl text-ink">How subscription work orders are handled</h2>
     <div class="card p-6">
       <div class="grid gap-3 md:grid-cols-5 text-sm text-slate text-center">

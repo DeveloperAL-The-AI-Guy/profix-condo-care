@@ -4,14 +4,14 @@ const phone = '780-555-0142';
 const email = 'service@profixcondocare.ca';
 ---
 <BaseLayout title="Request Condo Service | ProFix Condo Care Edmonton" description="Request service or emergency call-out for your Edmonton condo. Fast response, documented work.">
-  <section class="section-shell py-14 space-y-4">
+  <section class="section-shell py-14 space-y-4 reveal">
     <p class="badge">Contact / Request Service</p>
     <h1 class="font-heading text-4xl text-ink">Tell us what your building needs</h1>
     <p class="text-slate max-w-3xl">We reply within one business day (faster for emergencies). Call or email anytime.</p>
   </section>
 
-  <section class="section-shell pb-12 grid gap-8 md:grid-cols-2 items-start">
-    <form class="card p-6 space-y-3" name="contact-request" method="post" data-netlify="true" netlify-honeypot="honeypot">
+  <section class="section-shell pb-12 grid gap-8 md:grid-cols-2 items-start reveal">
+    <form class="card p-6 space-y-3 frosted" name="contact-request" method="post" data-netlify="true" netlify-honeypot="honeypot">
       <input type="hidden" name="form-name" value="contact-request" />
       <div class="grid gap-3 md:grid-cols-2">
         <label class="text-sm text-ink">Name<input class="mt-1 w-full rounded-lg border border-stone bg-white px-3 py-2" name="name" required /></label>

@@ -4,13 +4,13 @@ const areas = ['Edmonton (primary)', 'St. Albert', 'Sherwood Park', 'Spruce Grov
 const tasks = ['Parkade sump/drain checks', 'Heat trace and exterior outlets', 'Ice-melt routes and slip prevention', 'Lobby/common-area touch-ups', 'Corridor lighting and fixtures', 'Suite turnover repairs', 'Caulking and sealing', 'Minor carpentry'];
 ---
 <BaseLayout title="Edmonton Condo Maintenance Service Area | ProFix" description="Serving Edmonton condos with winter-ready maintenance, inspections, and fast response; nearby communities covered.">
-  <section class="section-shell py-14 space-y-4">
+  <section class="section-shell py-14 space-y-4 reveal">
     <p class="badge">Service Area</p>
     <h1 class="font-heading text-4xl text-ink">Edmonton & Area</h1>
     <p class="text-slate max-w-3xl">Winter-aware condo maintenance with fast response to reduce damage and liability. Nearby communities listed as placeholders—confirm before publishing.</p>
   </section>
 
-  <section class="section-shell pb-12 grid gap-4 md:grid-cols-2">
+  <section class="section-shell pb-12 grid gap-4 md:grid-cols-2 reveal">
     <div class="card p-6 space-y-3">
       <h2 class="font-heading text-2xl text-ink">Primary coverage</h2>
       <ul class="list-check">{areas.map((a) => <li>{a}</li>)}</ul>
@@ -25,7 +25,7 @@ const tasks = ['Parkade sump/drain checks', 'Heat trace and exterior outlets', '
     </div>
   </section>
 
-  <section class="section-shell pb-16 space-y-4">
+  <section class="section-shell pb-16 space-y-4 reveal">
     <h2 class="font-heading text-3xl text-ink">Typical condo tasks we handle</h2>
     <div class="card p-6 grid gap-3 md:grid-cols-2 text-sm text-slate">
       {tasks.map((t) => (

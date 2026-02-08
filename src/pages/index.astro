@@ -3,25 +3,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const phone = '780-555-0142';
 ---
 <BaseLayout title="Condo Maintenance Edmonton | ProFix Condo Care" description="Preventative maintenance, fast repairs, and board-ready documentation for Edmonton condo boards and property managers. Flat $110 call-out + 24/7 emergency.">
-  <section class="section-shell py-14 md:py-20 flex flex-col gap-10 hero-grid">
-    <div class="max-w-3xl space-y-6">
-      <p class="badge">Edmonton Condo Maintenance</p>
-      <h1 class="font-heading text-4xl md:text-5xl text-ink leading-tight">Condo Maintenance Without the Headaches (Edmonton)</h1>
-      <p class="text-lg text-slate">Reliable preventative maintenance and fast repairs for Edmonton condo boards & property managers—done right and documented properly.</p>
+  <section class="section-shell py-16 md:py-24 flex flex-col gap-12 hero-grid rounded-soft text-white shadow-glow">
+    <div class="max-w-3xl space-y-6 reveal">
+      <p class="badge bg-white/15 text-white border border-white/30">Edmonton Condo Maintenance</p>
+      <h1 class="font-heading text-4xl md:text-5xl leading-tight text-white">Condo Maintenance Without the Headaches (Edmonton)</h1>
+      <p class="text-lg text-white/80">Reliable preventative maintenance and fast repairs for Edmonton condo boards & property managers—done right and documented properly.</p>
       <div class="flex flex-wrap gap-3">
         <a class="btn-primary" href="/contact">Request Service</a>
-        <a class="btn-secondary" href={`tel:${phone}`}>Call/Text {phone}</a>
+        <a class="btn-secondary bg-white/90" href={`tel:${phone}`}>Call/Text {phone}</a>
       </div>
-      <div class="flex flex-wrap gap-4 text-sm text-slate">
-        <span class="badge">Documentation</span>
-        <span class="badge">Predictable pricing</span>
-        <span class="badge">Fast response</span>
+      <div class="flex flex-wrap gap-3 text-sm text-white/80">
+        <span class="badge bg-white/10 text-white border border-white/20">Documentation</span>
+        <span class="badge bg-white/10 text-white border border-white/20">Predictable pricing</span>
+        <span class="badge bg-white/10 text-white border border-white/20">Fast response</span>
       </div>
+    </div>
+    <div class="grid gap-4 md:grid-cols-3 max-w-5xl reveal">
+      {['Board-ready PDFs', '24/7 emergency triage', 'Photo proof every visit'].map((item) => (
+        <div class="frosted text-ink p-4 text-sm shadow-card">{item}</div>
+      ))}
     </div>
   </section>
 
-  <section class="section-shell py-12 grid gap-6 md:grid-cols-[1.3fr_1fr] items-center">
-    <div class="space-y-4">
+  <section class="section-shell py-14 grid gap-6 md:grid-cols-[1.3fr_1fr] items-center">
+    <div class="space-y-4 reveal">
       <h2 class="font-heading text-3xl text-ink">Board-Ready Documentation</h2>
       <p class="text-slate">Every visit ends with photos, a PDF report, and a line-by-line invoice—ready for board review and property manager records.</p>
       <ul class="list-check">
@@ -30,14 +35,14 @@ const phone = '780-555-0142';
         <li>Clean invoices matching scope</li>
       </ul>
     </div>
-    <div class="card p-6 space-y-3">
+    <div class="card p-6 space-y-3 reveal">
       <p class="text-sm font-semibold text-slate uppercase">Sample Deliverables (placeholders)</p>
       <div class="rounded-lg bg-fog p-4 text-xs text-slate">[Placeholder] PDF cover + 6 photos</div>
       <div class="rounded-lg bg-fog p-4 text-xs text-slate">[Placeholder] Invoice line items</div>
     </div>
   </section>
 
-  <section class="section-shell py-12 space-y-6">
+  <section class="section-shell py-12 space-y-6 reveal">
     <div class="flex items-center justify-between flex-wrap gap-3">
       <h2 class="font-heading text-3xl text-ink">Services We Handle</h2>
       <a class="btn-secondary" href="/services">View full services</a>
@@ -52,8 +57,8 @@ const phone = '780-555-0142';
     </div>
   </section>
 
-  <section class="section-shell py-12 grid gap-8 md:grid-cols-2 items-center">
-    <div class="space-y-4">
+  <section class="section-shell py-14 grid gap-8 md:grid-cols-2 items-center">
+    <div class="space-y-4 reveal">
       <p class="badge">For Property Managers</p>
       <h2 class="font-heading text-3xl text-ink">Subscription that reduces chaos</h2>
       <p class="text-slate">Monthly condo-care subscription: priority dispatch, standardized reporting, seasonal checks, and fewer vendor chases.</p>
@@ -68,14 +73,14 @@ const phone = '780-555-0142';
         <a class="btn-secondary" href="/contact">Request a quote</a>
       </div>
     </div>
-    <div class="card p-6 space-y-4">
+    <div class="card p-6 space-y-4 reveal">
       <h3 class="font-semibold text-ink">Why it works</h3>
       <p class="text-sm text-slate">Predictable visits, faster approvals, and documentation your boards can file immediately.</p>
       <div class="rounded-lg bg-fog p-4 text-sm text-slate">Placeholder timeline: request → confirm scope → dispatch → photo/PDF → invoice</div>
     </div>
   </section>
 
-  <section class="section-shell py-12">
+  <section class="section-shell py-12 reveal">
     <div class="grid gap-4 md:grid-cols-4">
       {[
         { title: 'Flat $110 Call-Out + First Hour', body: 'Within Edmonton area. Transparent and predictable.' },
@@ -91,7 +96,7 @@ const phone = '780-555-0142';
     </div>
   </section>
 
-  <section class="section-shell py-12 space-y-6">
+  <section class="section-shell py-12 space-y-6 reveal">
     <div class="flex items-center justify-between flex-wrap gap-3">
       <h2 class="font-heading text-3xl text-ink">Draft Testimonials (replace with real)</h2>
       <p class="text-xs text-slate">Placeholders—verify before publishing.</p>
@@ -110,7 +115,7 @@ const phone = '780-555-0142';
     </div>
   </section>
 
-  <section class="section-shell py-12">
+  <section class="section-shell py-12 reveal">
     <h2 class="font-heading text-3xl text-ink mb-4">FAQ</h2>
     <div class="space-y-3">
       {[
@@ -129,8 +134,8 @@ const phone = '780-555-0142';
     </div>
   </section>
 
-  <section class="section-shell py-14">
-    <div class="card p-6 md:p-10 grid gap-6 md:grid-cols-2 items-center">
+  <section class="section-shell py-14 reveal">
+    <div class="card p-6 md:p-10 grid gap-6 md:grid-cols-2 items-center accent-band">
       <div class="space-y-4">
         <h2 class="font-heading text-3xl text-ink">Tell us what your building needs</h2>
         <p class="text-slate">We reply within one business day (faster for emergencies). Call/text anytime.</p>
