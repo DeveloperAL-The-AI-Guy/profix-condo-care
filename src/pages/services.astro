@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const services = [
+  {
+    title: 'General Repairs',
+    for: 'Boards needing reliable day-to-day fixes.',
+    includes: ['Drywall/paint touch-ups', 'Doors, trims, hardware', 'Common-area repairs'],
+    examples: ['Unit leaks triage', 'Hallway scuffs', 'Baseboard fixes'],
+    excludes: ['Major structural', 'Elevators', 'Large roofing']
+  },
+  {
+    title: 'Emergency Call-Out',
+    for: 'Property managers needing immediate response.',
+    includes: ['Water shutoffs', 'Containment', 'Make-safe tasks'],
+    examples: ['Burst pipe mitigation', 'Break-in board-ups'],
+    excludes: ['Fire response', 'Elevator rescues']
+  },
+  {
+    title: 'Safety Inspections & Reports',
+    for: 'Boards that need documented checks.',
+    includes: ['Life-safety visual checks', 'Lighting and egress', 'Trip hazards'],
+    examples: ['Parkade drain/heat trace checks', 'Exit lighting'],
+    excludes: ['Engineering certifications']
+  },
+  {
+    title: 'Seasonal Upkeep',
+    for: 'Winter and shoulder-season readiness.',
+    includes: ['Heat trace checks', 'Ice-melt routes', 'Gutter/parkade drains'],
+    examples: ['Parkade sump', 'Exterior caulking spots'],
+    excludes: ['Full landscaping/snow removal contracts']
+  },
+  {
+    title: 'Carpentry & Minor Renovations',
+    for: 'Light renos that need clean finishes.',
+    includes: ['Millwork repairs', 'Closers/frames', 'Small framing/trim'],
+    examples: ['Amenity room refresh', 'Storage buildouts'],
+    excludes: ['Major structural framing']
+  },
+  {
+    title: 'Painting & Finishing',
+    for: 'Common areas and suites needing clean paint.',
+    includes: ['Hallway sections', 'Suite turnover patches', 'Doors/trim'],
+    examples: ['Lobby touch-ups', 'Suite patch/paint'],
+    excludes: ['Full building repaint projects']
+  },
+];
+const typical = ['Unit leaks', 'Hallway paint touch-ups', 'Drywall repair', 'Door closers', 'Fob hardware swaps', 'Parkade drain checks', 'Heat trace checks', 'Trip hazards', 'Guardrail tightening', 'Suite turnover patch/paint', 'Caulking', 'Baseboard repair', 'Small carpentry', 'Light fixture swaps', 'Safety signage'];
+---
+<BaseLayout title="Condo Repair Services in Edmonton | ProFix" description="Board-ready condo repair, inspections, seasonal upkeep, and minor renovations with clear scope and documentation.">
+  <section class="section-shell py-14 space-y-4">
+    <p class="badge">Services</p>
+    <h1 class="font-heading text-4xl text-ink">Board-friendly catalog of what we handle</h1>
+    <p class="text-slate max-w-3xl">Clear scopes, fast scheduling, and documentation every visit. All copy is placeholder-ready for Edmonton condos.</p>
+  </section>
+
+  <section class="section-shell pb-12 grid gap-6 md:grid-cols-2">
+    {services.map((service) => (
+      <div class="card p-6 space-y-3" id={service.title.toLowerCase().replace(/\s+/g, '-')}> 
+        <div class="flex items-center justify-between">
+          <h2 class="font-heading text-2xl text-ink">{service.title}</h2>
+          <a class="text-sm text-accent" href="/contact">Request Service</a>
+        </div>
+        <p class="text-sm text-slate">Who it’s for: {service.for}</p>
+        <p class="text-sm text-ink font-semibold">What’s included</p>
+        <ul class="list-check">{service.includes.map((i) => <li>{i}</li>)}</ul>
+        <p class="text-sm text-ink font-semibold">Typical condo examples</p>
+        <ul class="list-check">{service.examples.map((i) => <li>{i}</li>)}</ul>
+        <p class="text-sm text-ink font-semibold">What’s not included</p>
+        <ul class="list-check">{service.excludes.map((i) => <li>{i}</li>)}</ul>
+      </div>
+    ))}
+  </section>
+
+  <section class="section-shell pb-16 space-y-4">
+    <h2 class="font-heading text-3xl text-ink">Typical Requests in Edmonton Condos</h2>
+    <div class="card p-6">
+      <div class="grid gap-2 md:grid-cols-2 lg:grid-cols-3 text-sm text-slate">
+        {typical.map((item) => (
+          <div class="flex items-start gap-2"><span class="text-accent">•</span><span>{item}</span></div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

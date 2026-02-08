@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const phone = '780-555-0142';
+const email = 'service@profixcondocare.ca';
+---
+<BaseLayout title="Request Condo Service | ProFix Condo Care Edmonton" description="Request service or emergency call-out for your Edmonton condo. Fast response, documented work.">
+  <section class="section-shell py-14 space-y-4">
+    <p class="badge">Contact / Request Service</p>
+    <h1 class="font-heading text-4xl text-ink">Tell us what your building needs</h1>
+    <p class="text-slate max-w-3xl">We reply within one business day (faster for emergencies). Call or email anytime.</p>
+  </section>
+
+  <section class="section-shell pb-12 grid gap-8 md:grid-cols-2 items-start">
+    <form class="card p-6 space-y-3" name="contact-request" method="post" data-netlify="true" netlify-honeypot="honeypot">
+      <input type="hidden" name="form-name" value="contact-request" />
+      <div class="grid gap-3 md:grid-cols-2">
+        <label class="text-sm text-ink">Name<input class="mt-1 w-full rounded-lg border border-stone bg-white px-3 py-2" name="name" required /></label>
+        <label class="text-sm text-ink">Organization<input class="mt-1 w-full rounded-lg border border-stone bg-white px-3 py-2" name="org" /></label>
+      </div>
+      <div class="grid gap-3 md:grid-cols-2">
+        <label class="text-sm text-ink">Email<input class="mt-1 w-full rounded-lg border border-stone bg-white px-3 py-2" type="email" name="email" required /></label>
+        <label class="text-sm text-ink">Phone<input class="mt-1 w-full rounded-lg border border-stone bg-white px-3 py-2" name="phone" required /></label>
+      </div>
+      <label class="text-sm text-ink">Building location<input class="mt-1 w-full rounded-lg border border-stone bg-white px-3 py-2" name="location" required /></label>
+      <label class="text-sm text-ink">Urgency<select class="mt-1 w-full rounded-lg border border-stone bg-white px-3 py-2" name="urgency"><option>Normal</option><option>Urgent</option><option>Emergency</option></select></label>
+      <label class="text-sm text-ink">Service type<input class="mt-1 w-full rounded-lg border border-stone bg-white px-3 py-2" name="service" /></label>
+      <label class="text-sm text-ink">Details<textarea class="mt-1 w-full rounded-lg border border-stone bg-white px-3 py-2" name="details" rows="4"></textarea></label>
+      <button class="btn-primary w-full" type="submit">Submit Request</button>
+      <input type="text" name="honeypot" class="hidden" aria-hidden="true" />
+    </form>
+
+    <div class="space-y-4">
+      <div class="card p-6 space-y-2">
+        <p class="font-heading text-2xl text-ink">Call or email</p>
+        <p class="text-sm text-slate"><a class="text-ink" href={`tel:${phone}`}>{phone}</a></p>
+        <p class="text-sm text-slate"><a class="text-ink" href={`mailto:${email}`}>{email}</a></p>
+        <p class="text-sm text-slate">Hours: Mon–Fri 8–5; emergencies 24/7.</p>
+      </div>
+      <div class="card p-6 space-y-2">
+        <p class="font-heading text-2xl text-ink">What to expect</p>
+        <ul class="list-check">
+          <li>We acknowledge within one business day</li>
+          <li>Urgent: we call/text immediately if marked</li>
+          <li>Documentation provided after every visit</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

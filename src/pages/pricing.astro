@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const phone = '780-555-0142';
+---
+<BaseLayout title="Condo Maintenance Pricing & Emergency Response | ProFix" description="Flat $110 call-out + first hour, skilled vs light rates, after-hours policy, materials at cost + %, 24/7 emergency in Edmonton.">
+  <section class="section-shell py-14 space-y-4">
+    <p class="badge">Pricing & Response</p>
+    <h1 class="font-heading text-4xl text-ink">Transparent, board-ready pricing</h1>
+    <p class="text-slate max-w-3xl">Flat call-out, clear labour tiers, after-hours disclosure, and documented reporting included.</p>
+  </section>
+
+  <section class="section-shell pb-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+    <div class="card p-5 space-y-2">
+      <p class="font-semibold text-ink">Flat $110 Call-Out + First Hour</p>
+      <p class="text-sm text-slate">Within Edmonton area. Predictable start to every visit.</p>
+    </div>
+    <div class="card p-5 space-y-2">
+      <p class="font-semibold text-ink">Skilled Maintenance</p>
+      <p class="text-sm text-slate">$XXX/hr (placeholder). For specialized tasks requiring advanced trade skills.</p>
+    </div>
+    <div class="card p-5 space-y-2">
+      <p class="font-semibold text-ink">Light Maintenance</p>
+      <p class="text-sm text-slate">$XXX/hr (placeholder). For light repairs and touch-ups.</p>
+    </div>
+    <div class="card p-5 space-y-2">
+      <p class="font-semibold text-ink">After-Hours Surcharge</p>
+      <p class="text-sm text-slate">Disclosed before dispatch. 24/7 emergency response available.</p>
+    </div>
+  </section>
+
+  <section class="section-shell pb-12 grid gap-6 md:grid-cols-2 items-start">
+    <div class="card p-6 space-y-3">
+      <h2 class="font-heading text-2xl text-ink">Materials Policy</h2>
+      <p class="text-sm text-slate">Materials at cost + XX% (placeholder). Receipts attached to the invoice. Board-ready transparency.</p>
+    </div>
+    <div class="card p-6 space-y-3">
+      <h2 class="font-heading text-2xl text-ink">Reporting Included</h2>
+      <p class="text-sm text-slate">Photos + PDF + clean invoice every visit. Sample placeholders shown.</p>
+      <div class="grid gap-3 md:grid-cols-2 text-xs text-slate">
+        <div class="rounded-lg bg-fog p-3">[Placeholder] Sample invoice</div>
+        <div class="rounded-lg bg-fog p-3">[Placeholder] Sample report</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-shell pb-16">
+    <div class="card p-6 md:p-8 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+      <div>
+        <p class="font-heading text-2xl text-ink">Need pricing confirmed for your board?</p>
+        <p class="text-sm text-slate">We’ll send a written estimate and outline after-hours surcharges before dispatch.</p>
+      </div>
+      <div class="flex gap-3">
+        <a class="btn-primary" href="/contact">Request Written Quote</a>
+        <a class="btn-secondary" href={`tel:${phone}`}>Call/Text {phone}</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,136 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'ProFix Condo Care | Condo Maintenance Without the Headaches',
+  description = 'Preventative maintenance, fast repairs, and board-ready documentation for Edmonton condo boards and property managers.',
+} = Astro.props;
+
+const phone = '780-555-0142';
+const email = 'service@profixcondocare.ca';
+---
+<!DOCTYPE html>
+<html lang="en" class="bg-fog">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'LocalBusiness',
+          '@id': 'https://profixcondocare.ca/#business',
+          name: 'ProFix Condo Care',
+          description:
+            'Condo maintenance and repair services for Edmonton condo boards and property managers. Flat call-out, transparent rates, 24/7 emergency, board-ready documentation.',
+          url: 'https://profixcondocare.ca',
+          telephone: phone,
+          email,
+          priceRange: '$$',
+          areaServed: { '@type': 'City', name: 'Edmonton, AB' },
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '123 Placeholder St',
+            addressLocality: 'Edmonton',
+            addressRegion: 'AB',
+            postalCode: 'T5X 0X0',
+            addressCountry: 'CA',
+          },
+          openingHours: ['Mo-Fr 08:00-17:00'],
+          geo: { '@type': 'GeoCoordinates', latitude: '53.5461', longitude: '-113.4938' },
+          sameAs: ['https://www.linkedin.com/company/profix-placeholder'],
+        },
+        {
+          '@type': 'Organization',
+          '@id': 'https://profixcondocare.ca/#org',
+          name: 'ProFix Condo Care',
+          url: 'https://profixcondocare.ca',
+          logo: 'https://profixcondocare.ca/assets/logo.png',
+          contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: phone,
+            contactType: 'customer service',
+            areaServed: 'CA-AB',
+          },
+        },
+      ],
+    })} />
+  </head>
+  <body class="min-h-screen">
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-white/80">
+      <div class="section-shell flex items-center justify-between py-4">
+        <div class="flex items-center gap-3">
+          <div class="h-10 w-10 rounded-full bg-ink text-white flex items-center justify-center font-heading text-lg">PF</div>
+          <div class="flex flex-col leading-tight">
+            <span class="font-heading text-lg text-ink">ProFix Condo Care</span>
+            <span class="text-xs text-slate">Edmonton • Condo Maintenance</span>
+          </div>
+        </div>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-ink">
+          <a href="/">Home</a>
+          <a href="/services">Services</a>
+          <a href="/subscriptions">Subscription Plans</a>
+          <a href="/pricing">Pricing & Response</a>
+          <a href="/about">About</a>
+          <a href="/service-area">Service Area</a>
+          <a href="/contact" class="btn-primary !py-2">Request Service</a>
+        </nav>
+        <a class="md:hidden btn-primary !px-4 !py-2" href={`tel:${phone}`}>Call/Text</a>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="mt-16 border-t border-white/70 bg-white/90">
+      <div class="section-shell py-10 grid gap-8 md:grid-cols-3">
+        <div class="space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full bg-ink text-white flex items-center justify-center font-heading text-lg">PF</div>
+            <div>
+              <p class="font-heading text-lg text-ink">ProFix Condo Care</p>
+              <p class="text-sm text-slate">Condo maintenance without the headaches.</p>
+            </div>
+          </div>
+          <p class="text-sm text-slate">Serving Edmonton condo boards and property managers with documented, predictable maintenance and repairs.</p>
+        </div>
+        <div>
+          <p class="font-semibold text-ink mb-3">Navigation</p>
+          <div class="grid grid-cols-2 gap-2 text-sm text-slate">
+            <a href="/services">Services</a>
+            <a href="/subscriptions">Subscriptions</a>
+            <a href="/pricing">Pricing & Response</a>
+            <a href="/about">About</a>
+            <a href="/service-area">Service Area</a>
+            <a href="/contact">Contact</a>
+          </div>
+        </div>
+        <div class="space-y-2 text-sm text-slate">
+          <p class="font-semibold text-ink">Contact</p>
+          <p><a class="text-ink" href={`tel:${phone}`}>{phone}</a></p>
+          <p><a class="text-ink" href={`mailto:${email}`}>{email}</a></p>
+          <p>Hours: Mon–Fri 8–5 (emergency 24/7)</p>
+        </div>
+      </div>
+      <div class="section-shell pb-8 text-xs text-slate">© {new Date().getFullYear()} ProFix Condo Care. All rights reserved.</div>
+    </footer>
+
+    <div class="sticky-cta md:hidden">
+      <div class="section-shell py-3 flex items-center justify-between gap-3">
+        <a href={`tel:${phone}`} class="btn-primary w-1/2 text-center">Call/Text</a>
+        <a href="/contact" class="btn-secondary w-1/2 text-center">Request Service</a>
+      </div>
+    </div>
+  </body>
+</html>

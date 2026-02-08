@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const plans = [
+  {
+    name: 'Essential',
+    price: 'Custom quote',
+    features: ['Priority dispatch', 'Quarterly inspections', 'Photo/PDF per visit'],
+  },
+  {
+    name: 'Plus',
+    price: 'Custom quote',
+    features: ['Monthly site walk', 'Minor seasonal upkeep', 'Summary roll-up'],
+  },
+  {
+    name: 'Premium',
+    price: 'Custom quote',
+    features: ['Biweekly presence', 'Seasonal prep', 'Annual capital snapshot'],
+  },
+];
+const steps = ['Request', 'Scope confirmation', 'Dispatch', 'Photo/PDF delivered', 'Invoice/summary'];
+---
+<BaseLayout title="Property Manager Maintenance Subscriptions | ProFix Condo Care" description="Predictable condo maintenance subscriptions for Edmonton property managers with priority dispatch and PDF reporting.">
+  <section class="section-shell py-14 space-y-4">
+    <p class="badge">Subscription Plans</p>
+    <h1 class="font-heading text-4xl text-ink">Predictable maintenance for property managers</h1>
+    <p class="text-slate max-w-3xl">Fewer vendor calls, faster response, consistent documentation, and budgets you can forecast.</p>
+  </section>
+
+  <section class="section-shell pb-12 grid gap-4 md:grid-cols-2">
+    <div class="card p-6 space-y-3">
+      <h2 class="font-heading text-2xl text-ink">Problems solved</h2>
+      <ul class="list-check">
+        <li>Priority dispatch reduces downtime</li>
+        <li>Standardized reporting keeps boards aligned</li>
+        <li>Predictable cadence for seasonal risk (freeze/thaw)</li>
+        <li>Less vendor chasing, more proactive upkeep</li>
+      </ul>
+    </div>
+    <div class="card p-6 space-y-3">
+      <h2 class="font-heading text-2xl text-ink">What’s included</h2>
+      <ul class="list-check">
+        <li>Agreed visit cadence (monthly/quarterly/biweekly)</li>
+        <li>Photo packs + PDF after every visit</li>
+        <li>Summary roll-ups for boards</li>
+        <li>Priority queue for work orders</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-shell pb-12">
+    <div class="grid gap-4 md:grid-cols-3">
+      {plans.map((plan) => (
+        <div class="card p-6 space-y-4">
+          <div class="flex items-center justify-between">
+            <p class="font-heading text-xl text-ink">{plan.name}</p>
+            <span class="text-xs text-slate uppercase">Property Managers</span>
+          </div>
+          <p class="text-sm text-slate">{plan.price}</p>
+          <ul class="list-check">{plan.features.map((f) => <li>{f}</li>)}</ul>
+          <a class="btn-primary w-full text-center" href="/contact">Request a Quote</a>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-shell pb-16 space-y-4">
+    <h2 class="font-heading text-3xl text-ink">How subscription work orders are handled</h2>
+    <div class="card p-6">
+      <div class="grid gap-3 md:grid-cols-5 text-sm text-slate text-center">
+        {steps.map((step, idx) => (
+          <div class="flex flex-col items-center gap-2">
+            <div class="h-10 w-10 flex items-center justify-center rounded-full bg-ink text-white font-semibold">{idx + 1}</div>
+            <p>{step}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+    <div class="flex gap-3">
+      <a class="btn-primary" href="/contact">Schedule a Walkthrough</a>
+      <a class="btn-secondary" href="/contact">Request a Quote</a>
+    </div>
+  </section>
+</BaseLayout>

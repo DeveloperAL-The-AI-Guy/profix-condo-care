@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const phone = '780-555-0142';
+---
+<BaseLayout title="Condo Maintenance Edmonton | ProFix Condo Care" description="Preventative maintenance, fast repairs, and board-ready documentation for Edmonton condo boards and property managers. Flat $110 call-out + 24/7 emergency.">
+  <section class="section-shell py-14 md:py-20 flex flex-col gap-10 hero-grid">
+    <div class="max-w-3xl space-y-6">
+      <p class="badge">Edmonton Condo Maintenance</p>
+      <h1 class="font-heading text-4xl md:text-5xl text-ink leading-tight">Condo Maintenance Without the Headaches (Edmonton)</h1>
+      <p class="text-lg text-slate">Reliable preventative maintenance and fast repairs for Edmonton condo boards & property managers—done right and documented properly.</p>
+      <div class="flex flex-wrap gap-3">
+        <a class="btn-primary" href="/contact">Request Service</a>
+        <a class="btn-secondary" href={`tel:${phone}`}>Call/Text {phone}</a>
+      </div>
+      <div class="flex flex-wrap gap-4 text-sm text-slate">
+        <span class="badge">Documentation</span>
+        <span class="badge">Predictable pricing</span>
+        <span class="badge">Fast response</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-shell py-12 grid gap-6 md:grid-cols-[1.3fr_1fr] items-center">
+    <div class="space-y-4">
+      <h2 class="font-heading text-3xl text-ink">Board-Ready Documentation</h2>
+      <p class="text-slate">Every visit ends with photos, a PDF report, and a line-by-line invoice—ready for board review and property manager records.</p>
+      <ul class="list-check">
+        <li>Photo packs before/after</li>
+        <li>PDF summary per visit</li>
+        <li>Clean invoices matching scope</li>
+      </ul>
+    </div>
+    <div class="card p-6 space-y-3">
+      <p class="text-sm font-semibold text-slate uppercase">Sample Deliverables (placeholders)</p>
+      <div class="rounded-lg bg-fog p-4 text-xs text-slate">[Placeholder] PDF cover + 6 photos</div>
+      <div class="rounded-lg bg-fog p-4 text-xs text-slate">[Placeholder] Invoice line items</div>
+    </div>
+  </section>
+
+  <section class="section-shell py-12 space-y-6">
+    <div class="flex items-center justify-between flex-wrap gap-3">
+      <h2 class="font-heading text-3xl text-ink">Services We Handle</h2>
+      <a class="btn-secondary" href="/services">View full services</a>
+    </div>
+    <div class="grid gap-4 md:grid-cols-3">
+      {[ 'General Repairs', 'Emergency Call-Out', 'Safety Inspections & Reports', 'Seasonal Upkeep', 'Carpentry & Minor Renovations', 'Painting & Finishing' ].map((item) => (
+        <div class="card p-5" aria-label={item}>
+          <p class="font-semibold text-ink">{item}</p>
+          <p class="text-sm text-slate mt-2">Lorem ipsum placeholder copy for {item.toLowerCase()} tailored to Edmonton condos.</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-shell py-12 grid gap-8 md:grid-cols-2 items-center">
+    <div class="space-y-4">
+      <p class="badge">For Property Managers</p>
+      <h2 class="font-heading text-3xl text-ink">Subscription that reduces chaos</h2>
+      <p class="text-slate">Monthly condo-care subscription: priority dispatch, standardized reporting, seasonal checks, and fewer vendor chases.</p>
+      <ul class="list-check">
+        <li>Priority scheduling and triage</li>
+        <li>Monthly/quarterly walkthroughs</li>
+        <li>Photo + PDF per visit</li>
+        <li>Summary roll-ups for boards</li>
+      </ul>
+      <div class="flex gap-3">
+        <a class="btn-primary" href="/subscriptions">See plans</a>
+        <a class="btn-secondary" href="/contact">Request a quote</a>
+      </div>
+    </div>
+    <div class="card p-6 space-y-4">
+      <h3 class="font-semibold text-ink">Why it works</h3>
+      <p class="text-sm text-slate">Predictable visits, faster approvals, and documentation your boards can file immediately.</p>
+      <div class="rounded-lg bg-fog p-4 text-sm text-slate">Placeholder timeline: request → confirm scope → dispatch → photo/PDF → invoice</div>
+    </div>
+  </section>
+
+  <section class="section-shell py-12">
+    <div class="grid gap-4 md:grid-cols-4">
+      {[
+        { title: 'Flat $110 Call-Out + First Hour', body: 'Within Edmonton area. Transparent and predictable.' },
+        { title: 'Right Skill, Right Rate', body: 'Skilled vs. light maintenance rates clearly separated.' },
+        { title: '24/7 Emergency Response', body: 'After-hours surcharge disclosed before dispatch.' },
+        { title: 'Board-Ready Documentation', body: 'Photos, PDF summary, clean invoice every visit.' },
+      ].map((tile) => (
+        <div class="card p-5 space-y-2">
+          <p class="font-semibold text-ink">{tile.title}</p>
+          <p class="text-sm text-slate">{tile.body}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-shell py-12 space-y-6">
+    <div class="flex items-center justify-between flex-wrap gap-3">
+      <h2 class="font-heading text-3xl text-ink">Draft Testimonials (replace with real)</h2>
+      <p class="text-xs text-slate">Placeholders—verify before publishing.</p>
+    </div>
+    <div class="grid gap-4 md:grid-cols-3">
+      {[
+        'Lorem ipsum response within hours and clear photos for the board.',
+        'Invoices match scope; no surprises for our condo board.',
+        'Winter emergency handled before pipes froze—fast and documented.',
+      ].map((quote) => (
+        <div class="card p-5 space-y-3">
+          <p class="text-sm text-slate">“{quote}”</p>
+          <p class="text-xs text-ink font-semibold">— Placeholder, Edmonton</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-shell py-12">
+    <h2 class="font-heading text-3xl text-ink mb-4">FAQ</h2>
+    <div class="space-y-3">
+      {[
+        ['What is your typical response time?', 'Same-business-day scheduling; emergencies 24/7 (after-hours surcharge disclosed).'],
+        ['Do you charge more after hours?', 'Yes, a clear surcharge is confirmed before dispatch.'],
+        ['What reporting do we get?', 'Photos, PDF summary, and a clean invoice every visit.'],
+        ['How do materials work?', 'Materials at cost + transparent % fee; receipts provided.'],
+        ['What don’t you do?', 'No elevators, major structural, or roofing beyond minor patch.'],
+        ['How do subscriptions work?', 'Priority dispatch, set walkthroughs, and monthly/quarterly summaries.'],
+      ].map(([q, a]) => (
+        <details class="card p-4">
+          <summary class="font-semibold text-ink cursor-pointer">{q}</summary>
+          <p class="text-sm text-slate mt-2">{a}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-shell py-14">
+    <div class="card p-6 md:p-10 grid gap-6 md:grid-cols-2 items-center">
+      <div class="space-y-4">
+        <h2 class="font-heading text-3xl text-ink">Tell us what your building needs</h2>
+        <p class="text-slate">We reply within one business day (faster for emergencies). Call/text anytime.</p>
+        <div class="flex gap-3">
+          <a class="btn-primary" href="/contact">Request Service</a>
+          <a class="btn-secondary" href={`tel:${phone}`}>Call/Text {phone}</a>
+        </div>
+      </div>
+      <form class="space-y-3" name="home-request" method="post" data-netlify="true" netlify-honeypot="honeypot">
+        <input type="hidden" name="form-name" value="home-request" />
+        <div class="grid gap-3 md:grid-cols-2">
+          <label class="text-sm text-ink">Name<input class="mt-1 w-full rounded-lg border border-stone bg-white px-3 py-2" name="name" required /></label>
+          <label class="text-sm text-ink">Organization<input class="mt-1 w-full rounded-lg border border-stone bg-white px-3 py-2" name="org" /></label>
+        </div>
+        <div class="grid gap-3 md:grid-cols-2">
+          <label class="text-sm text-ink">Email<input class="mt-1 w-full rounded-lg border border-stone bg-white px-3 py-2" type="email" name="email" required /></label>
+          <label class="text-sm text-ink">Phone<input class="mt-1 w-full rounded-lg border border-stone bg-white px-3 py-2" name="phone" required /></label>
+        </div>
+        <label class="text-sm text-ink">Building location<input class="mt-1 w-full rounded-lg border border-stone bg-white px-3 py-2" name="location" required /></label>
+        <label class="text-sm text-ink">Urgency<select class="mt-1 w-full rounded-lg border border-stone bg-white px-3 py-2" name="urgency"><option>Normal</option><option>Urgent</option><option>Emergency</option></select></label>
+        <label class="text-sm text-ink">Service type<input class="mt-1 w-full rounded-lg border border-stone bg-white px-3 py-2" name="service" /></label>
+        <label class="text-sm text-ink">Details<textarea class="mt-1 w-full rounded-lg border border-stone bg-white px-3 py-2" name="details" rows="3"></textarea></label>
+        <button class="btn-primary w-full" type="submit">Submit Request</button>
+        <input type="text" name="honeypot" class="hidden" aria-hidden="true" />
+      </form>
+    </div>
+  </section>
+</BaseLayout>
